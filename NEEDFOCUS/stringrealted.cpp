@@ -4,7 +4,6 @@ using namespace std;
 
 int main(){
     string str = to_string(INT_MIN);
-    // cout << 2*(int(str[6]));
+    cout << 2*(int(str[6]));
 
-    cout << int(str[2]);
 }

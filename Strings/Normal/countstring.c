@@ -4,7 +4,7 @@ int countlength(char arr[]);
 
 int main(){
     char name[100];
-    fgets(name, 100, stdin);                             // fgets is treating extra n(space of fgets) as \n thats why we -1 in count to get legnth
+    fgets(name, 100, stdin);                      // fgets is treating new line(enter key here) as \n thats why we did -1 in count to get legnth
     printf("length is : %d", countlength(name));
 }
 

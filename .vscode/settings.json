@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "sstream": "c",
-        "6[1].C": "cpp"
+        "6[1].C": "cpp",
+        "regex": "c",
+        "bitset": "c",
+        "chrono": "c",
+        "algorithm": "c"
     }
 }

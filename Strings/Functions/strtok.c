@@ -8,11 +8,9 @@ int main(){
 
     scanf("%[^\n]s",str1);
 
-    char * ptr = strtok(str1,str2);
+    char *ptr = strtok(str1,str2);
 
-    printf("%d \n",ptr);
-
-    while(ptr != NULL){                      // NULL is a integer here (means NULL is storing address) we are comparing address here acc. to me
+    while(ptr != NULL){                      // NULL is a integer here so we are comparing ptr in integer form to the NULL
         printf("%s ",ptr);
         ptr = strtok(NULL,str2);
     }

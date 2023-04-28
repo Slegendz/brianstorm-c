@@ -22,7 +22,5 @@ int main(){
     int x;
     scanf("%d",&x);
     isPalindrome(x);
-
-
 }
  
