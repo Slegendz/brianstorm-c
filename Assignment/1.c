@@ -23,7 +23,7 @@ int main(){
     return 0;
 }
 
-Output: 
-Enter a String : Graphic Era Hill University
-Original String : Graphic Era Hill University
-Copied String : Graphic Era Hill Universiy
+// Output: 
+// Enter a String : Graphic Era Hill University
+// Original String : Graphic Era Hill University
+// Copied String : Graphic Era Hill Universiy

@@ -25,7 +25,7 @@ int main(){
     return 0;
 }
 
-Output: 
-Input string 1 : Good
-Input string 2 : Afternoon
-Ouput : Good Afternoon
+// Output: 
+// Input string 1 : Good
+// Input string 2 : Afternoon
+// Ouput : Good Afternoon

@@ -1,50 +1,34 @@
-#include <stdio.h>
-#include<stdbool.h>
+#include<stdio.h>
+#include<string.h>
 
-#define NO_OF_CHARS 256
- 
-/* function to check whether two strings are anagram of
-   each other */
-bool areAnagram(char* str1, char* str2)
-{
-    // Create 2 count arrays and initialize all values as 0
-    int count1[NO_OF_CHARS] = { 0 };
-    int count2[NO_OF_CHARS] = { 0 };
-    int i;
- 
-    // For each character in input strings, increment count
-    // in the corresponding count array
-    for (i = 0; str1[i] && str2[i]; i++) {
-        count1[str1[i]]++;
-        count2[str2[i]]++;
+int main(){
+    char str[100];
+    scanf("%[^\n]%*c",str);
+
+    int a= strlen(str);
+
+    int count = 1;
+    int max = 0;
+    int i=0,k=0;
+
+    while(str[i]!='\0'){
+        if(str[i] == '@'){
+            i++;
+            continue;
+        }
+     for(int j=i+1; j<a; j++){
+        if(str[i] == str[j]){
+            str[j] = '@';
+            count++;
+        }
+     }
+     if(max<count){
+        max = count;
+        k=i;
+     }
+     count = 1;
+     i++;
     }
- 
-    // If both strings are of different length. Removing
-    // this condition will make the program fail for strings
-    // like "aaca" and "aca"
-    if (str1[i] || str2[i])
-        return false;
- 
-    // Compare count arrays
-    for (i = 0; i < NO_OF_CHARS; i++){
-        if (count1[i] != count2[i])
-            return false;
-    }
-    return true;
-}
- 
-/* Driver code*/
-int main()
-{
-    char str1[] = "gram";
-    char str2[] = "garm";
- 
-    // Function Call
-    if (areAnagram(str1, str2))
-        printf("The two strings are anagram of each other");
-    else
-        printf("The two strings are not anagram of each "
-               "other");
- 
-    return 0;
+
+    printf("%d is max that is %c",max,str[k]);
 }
